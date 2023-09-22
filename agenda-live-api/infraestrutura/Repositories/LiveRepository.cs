@@ -1,23 +1,23 @@
-﻿using agenda_live_api.Domain.Models;
+﻿using agenda_live_api.Domain.DTOs;
+using agenda_live_api.Domain.Models;
 
 namespace agenda_live_api.infraestrutura.Repositories
 {
     public class LiveRepository : ILiveRepository
     {
         private readonly ConnectionContext _context = new ConnectionContext();
-
-        public void Add(Live live)
+        public void Post(LiveDTO live)
         {
             _context.Lives.Add(live);
             _context.SaveChanges();
         }
 
-        public List<Live> Get()
+        public IEnumerable<LiveDTO> Get()
         {
-            return _context.Lives.ToList();   //depois fazer o dto talvez
+            return _context.Lives.ToList();   
         }
 
-        public Live Get(int id)
+        public LiveDTO GetId(int id)
         {
            return _context.Lives.Find(id);
         }

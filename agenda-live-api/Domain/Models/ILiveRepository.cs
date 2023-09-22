@@ -1,11 +1,13 @@
-﻿namespace agenda_live_api.Domain.Models
+﻿using agenda_live_api.Domain.DTOs;
+
+namespace agenda_live_api.Domain.Models
 {
     public interface ILiveRepository
     {
-        void Add(Live live);
+        void Post(LiveDTO live);
 
-        List<Live> Get();
+        IEnumerable<LiveDTO> Get();
 
-        Live Get (int id);
+        LiveDTO GetId(int id);
     }
 }

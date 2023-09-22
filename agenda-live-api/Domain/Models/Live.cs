@@ -2,27 +2,27 @@
 {
     public class Live
     {
-        public string id { get; private set; }
-        public string liveName { get; private set; }
-        public string channelName { get; private set; }
-        public string liveDate { get; private set; }
-        public string liveTime { get; private set; }
-        public string liveLink { get; private set; }
+        public string Id { get;  set; }
+        public string LiveName { get;  set; }
+        public string ChannelName { get;  set; }
+        public string LiveDate { get;  set; }
+        public string LiveTime { get;  set; }
+        public string LiveLink { get;  set; }
 
         //public SafeResourceUrl urlSafe { get; private set; }
 
-        public Live(string id, string liveName, string channelName, string liveDate, string liveTime, string liveLink)
-        {
-            this.id = id;
-            this.liveName = liveName;
-            this.channelName = channelName;
-            this.liveDate = liveDate;
-            this.liveTime = liveTime;
-            this.liveLink = liveLink;
-        }
-
         public Live()
         {
+        }
+
+        public Live(string id, string liveName, string channelName, string liveDate, string liveTime, string liveLink)
+        {
+            Id = id;
+            LiveName = liveName;
+            ChannelName = channelName;
+            LiveDate = liveDate;
+            LiveTime = liveTime;
+            LiveLink = liveLink;
         }
     }
 }
